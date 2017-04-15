@@ -1,0 +1,231 @@
+---
+title: "A Whirlwind Tour of the Johns Hopkins Coursera Data Science Specialization"
+output: 
+  slidy_presentation:
+    footer: "Johns Hopkins Coursera Data Science Specialization: a Whirlwind Tour"
+    css: customStyles.css
+author: "Murray Thompson"
+date: "April 14, 2017"
+---
+
+
+Specialization Course Summary
+========================================================
+
+There are nine courses in the specialization, plus a capstone project.
+
+The courses in the specialization include:
+
+1. The Data Scientist's Toolbox
+0. R Programming
+0. Getting and Cleaning Data
+0. Exploratory Data Analysis
+0. Reproducible Research
+0. Statistical Inference
+0. Regression Models
+0. Practical Machine Learning
+0. Developing Data Products
+
+
+Instructors
+========================================================
+
+The main instructors across the specailization include:
+
+- Brian Caffo, PhD
+- Roger D. Peng, PhD
+- Jeff Leek, PhD
+
+Each of the instructors are members of the [Department of Biostatistics](http://www.jhsph.edu/departments/biostatistics/) at [Johns Hopkins University](https://www.jhu.edu/) Bloomberg School of Public Health.
+
+
+
+Course 1: The Data Scientist's Toolbox
+========================================================
+
+This course introduces the main tools and concepts that will be useful throughout the specialization, as well as an overview of topics that will be covered in more detail in other courses.
+
+
+This includes:
+
+<div class="col_left">
+
+- getting help and finding answers (i.e. you sometimes have to dig for things)
+- getting data
+- exploratory analysis
+- reproducible research
+- statistical inference
+- regression models
+
+</div>
+
+<div class="col_right">
+
+- machine learning
+- data products
+- installing R and Rstudio
+- version control and GitHub
+- markdown
+- types of questions (and related approaches)
+- experimental design
+
+</div>
+
+Course 2: R Programming
+========================================================
+
+This course introduces programming in R.
+
+It helps students get used to:
+
+- what R is
+- the Rstudio environment
+- R programming concepts (including data types, control structures, functions, and scoping)
+- data simulation in R
+
+
+Course 3: Getting and Cleaning Data
+========================================================
+
+This course covers how data can be obtained, and how to prepare it further analysis (it's not often ready to use immediately).
+
+Topics covered include:
+
+* raw vs processed data
+* downloading and reading from:
+    - files: csv, Excel, XML, JSON, etc
+    - storage systems: MySQL, APIs, web pages, etc
+* the data.table package (fast!)
+* filtering and sorting datasets
+* manipulating data (in a good way): creating, reshaping, and merging
+* text and date manipulation
+
+
+Course 4: Exploratory Data Anaylsis
+========================================================
+
+Once you have data, you need to figure out what it really is. This course introduces some concepts and methods to do so, including:
+
+<div class="col_left">
+
+## Plotting Systems:
+
+- base plotting system
+- lattice
+- ggplot
+
+</div>
+
+<div class="col_right">
+
+## Methods:
+
+- Hierarchical Clustering
+- K-Means Clustering
+- Dimension Reduction
+</div>
+
+
+
+Course 5: Reproducible Research
+========================================================
+
+This course explains the importance of making data research reproducible and introduces tools for doing so. It discusses presenting understandable summaries of findings, but also letting others go through your findings with a fine-tooth comb.
+
+This includes topics such as:
+
+- scripting and structure (including code books)
+- Reproducible documentation (R Markdown and knitr)
+- reproducible research checklist
+- evidence-based data analysis
+
+
+
+Course 6: Statistical Inference
+========================================================
+
+This course touches on inference - drawing conclusions about a population from a sample dataset.
+
+It discusses:
+
+- Probability and expected values (including IID)
+- Variability (standard error and variance)
+- Distributions (binomial, normal, and Poisson)
+- Asymptotics
+- Confidence intervals
+- Hypothesis testing (as well as t-tests and p-values)
+- Power
+- Resampling
+- Bootstrapping
+
+
+
+Course 7: Regression Models
+========================================================
+
+This course teaches concepts on regression - mostly focusing on linear models - for prediction.
+
+It covers topics such as:
+
+- least squares
+- regression coefficients
+- residuals and residual variance
+- inference in regression
+- multivariable regression
+- model selection (including diagnostics, variance inflation, etc)
+- generalized linear models (logistic, Poisson regression)
+
+
+Course 8: Practical Machine Learning
+========================================================
+
+In this course, the focus is on building prediction models via machine learning in R.
+
+Topics include:
+
+- errors and cross-validation
+- training, test, and validation tests
+- the caret R package
+- data slicing
+- predicting with various algorithms (tress, Bagging, Random Forests, Boosting)
+- regularized predictors and combining predictors
+- forecasting
+
+
+
+Course 9: Developing Data Products
+========================================================
+
+This course is centered around displaying and communicating data findings through various tools that are integrated with R, including:
+
+- Shiny Apps and Shiny Gadgets
+-  GoogleVis
+- Plotly (interactive charts!)
+- Leaflet (maps!)
+- R Packages
+- Swirl
+
+
+Data Product Example: Plotly
+========================================================
+
+This assignment requires a Plotly interactive visualization, so here is one now (using the 'heatmap' type):
+
+(Data is from the built-in R example dataset "volcano")
+
+```{r echo=FALSE, warning=FALSE, message = FALSE, }
+
+
+library(plotly)
+
+volcano_map <- plot_ly(z = ~volcano, type = "heatmap") %>%
+  layout(
+    title= "Maunga Whau Elevation Heatmap <br/> (10m grid resolution)",
+    xaxis= list(title="East-West Grid location (10m resolution)"),
+    yaxis= list(title="North-South Grid location (10m resolution)")
+    )
+
+volcano_map
+
+```
+
