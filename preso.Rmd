@@ -216,6 +216,10 @@ This assignment requires a Plotly interactive visualization, so here is one now 
 
 (Data is from the built-in R example dataset "volcano")
 
+<div style="background:#fcc; padding: 0.5em; font-size:0.8em"><strong>fellow Firefox users:</strong>: <br/>
+Looking through the course forum posts, the plotly element may not display properly in the current version of Firefox. If you don't see the heatmap, please try viewing in another browser (trust me, it's there!)
+</div>
+
 ```{r echo=FALSE, warning=FALSE, message = FALSE, }
 
 
