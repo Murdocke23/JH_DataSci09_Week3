@@ -227,7 +227,7 @@ library(plotly)
 
 volcano_map <- plot_ly(z = ~volcano, type = "heatmap") %>%
   layout(
-    title= "Maunga Whau Elevation Heatmap <br/> (10m grid resolution)",
+    title= "Maunga Whau Elevation Heatmap (10m grid resolution)",
     xaxis= list(title="East-West Grid location (10m resolution)"),
     yaxis= list(title="North-South Grid location (10m resolution)")
     )
