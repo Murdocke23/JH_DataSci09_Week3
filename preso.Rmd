@@ -26,6 +26,9 @@ The courses in the specialization include:
 0. Practical Machine Learning
 0. Developing Data Products
 
+<div style="width:50%;font-size:0.7em">
+(To see plotly visualization required for the assignment, please [jump directly to the slide](#(13)), if you wish)
+</div>
 
 Instructors
 ========================================================
